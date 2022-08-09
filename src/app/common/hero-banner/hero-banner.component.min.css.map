@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "hero-banner.component.scss"
+    ],
+    "names": [],
+    "file": "hero-banner.component.min.css"
+}
