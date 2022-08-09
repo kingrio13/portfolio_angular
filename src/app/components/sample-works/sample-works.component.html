@@ -1,0 +1,48 @@
+
+
+<div class="container mikespacer">
+
+
+    <div id="sampleWork" class="container">
+        <div class="section-title text-center">
+            <h2>Sample Work</h2>
+            <div class="bar"></div>
+            <p>Here are few of my work</p>
+        </div>
+
+
+
+    <div class="gallery-lightbox-container">
+      <div class="gallery">
+          <div *ngFor="let data of galleryData; let i=index" class="gallery-img" trackVisibility>
+              <img (click)="onPreviewImage(i)" [src]="data.imageSrc" [alt]="data.imageAlt">
+          </div>
+      </div>
+      <div *ngIf="showMask" class="lightbox" @animation2>
+          <span *ngIf="showCount" class="count">
+              {{currentIndex + 1}}/{{totalImageCount}}
+          </span>
+         
+         
+          <button *ngIf="previewImage" class="close-btn" (click)="onClosePreview()">
+            <fa-icon [icon]="faXmark"></fa-icon>
+          </button>
+          <button *ngIf="controls" class="btn-lightbox-carousel btn-prev" (click)="prev()">
+              <fa-icon [icon]="faAngleLeft" class="icon-prev"></fa-icon>
+          </button>
+          <button *ngIf="controls" class="btn-lightbox-carousel btn-next" (click)="next()">
+            <fa-icon [icon]="faAngleRight" class="icon-prev"></fa-icon>
+          </button>
+  
+          <div *ngIf="previewImage" 
+              [@animation]="{value: 'visible'}"
+              (@animation.done)="onAnimationEnd($event)"
+              class="lightbox-img">
+              <img [src]="currentLightboxImage.imageSrc" [alt]="currentLightboxImage.imageAlt">
+          </div>
+      </div>
+  </div>
+
+
+</div>
+</div>
