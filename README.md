@@ -1,8 +1,1 @@
-Hey hey hey...
-
-Rio Here.
-
-
-zzz
-
-wew
+This is angular portfolio made by Rio Michael
