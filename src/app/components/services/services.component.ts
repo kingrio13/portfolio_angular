@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { faWordpress, faShopify } from '@fortawesome/free-brands-svg-icons';
-import { faCamera, faCode, faHardDrive } from '@fortawesome/free-solid-svg-icons'
+import { faCamera, faCode, faHardDrive, faStar } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -19,6 +19,7 @@ export class ServicesComponent implements OnInit {
   faHardDrive = faHardDrive;
   faCode = faCode;
   faCamera = faCamera;
+  faStar = faStar;
 
   constructor() { }
 
